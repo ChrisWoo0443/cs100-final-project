@@ -18,9 +18,9 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * As college students, we have complex schedules that revolve around our class schedule, extra-curriculars, and personal responsibilities. With all of this going on, it is important to keep track of all tasks     that we have pending, such as homework, to ensure that nothing slips out of our mind. Therefore, it would be great to create a task schedular that can help us manage out schedules efficiently.  
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project) 
+ > * We plan on using C++ for this project
  > * What will be the input/output of your project?
- > * What are the features that the project provides?
+ > * The project will allow the user to create a list of tasks that they can add or remove. Each task will have the due date, priority of the task, and the category of which the task fits in.
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view with default columns). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added. All columns should be in the right order.
