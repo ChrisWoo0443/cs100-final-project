@@ -17,14 +17,14 @@
 
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include:
- > **The importance of a task scheduler**
+**The importance of a task scheduler**
  > * As college students, we have complex schedules that revolve around our class schedule, extra-curriculars, and personal responsibilities. With all of this going on, it is important to keep track of all tasks     that we have pending, such as homework, to ensure that nothing slips out of our mind. Therefore, it would be great to create a task schedular that can help us manage out schedules efficiently.  
- > **Technology specifications**
+ **Technology specifications**
  > * We plan on using C++ for this project. We will work on VSCode and use Git features to assist collaboration. We expect the program to be compatible on Windows and macOS, and hopefully will get it working on Linux if possible.
- > **Inputs and outputs**
+ **Inputs and outputs**
  > * Inputs: Via terminal commands, the user has various options:
  > * Add User: Strings inputted via the command terminal with the names of users or "task collections", such as for dividing work tasks and personal tasks
->  * Select User: Choose a user or "task collection" to view
+ > * Select User: Choose a user or "task collection" to view
  > * Add Task: Strings inputted via the command terminal with the names of tasks
  > * Add Task Label: Strings inputted via the command terminal with labels one can use to categorize tasks
  > * Priority: Integers inputted via the command terminal to determine how urgent or necessary a task si to complete
@@ -32,17 +32,16 @@
  > * Dates, times, and days of the week to schedule when tasks will be due and/or recurring tasks. 
  > * Output: All outputs will be run from the command terminal in the form of text
  > * List of users for the user to select
->  * List of tasks in the task collection
->  * List of labels associated with tasks
->  * Specific details about tasks, such as due date, addition date, or editing task details
->  * Statistics, such as task completion rate on-time
->  * **List of features**
->  * Task list view: Quickly see your list of tasks with due dates easily accessible.
->  * Task priority: Prioritize which tasks are important to do.
->  * Multiple collections: Choose between various "users" or collections with different sets of tasks.
->  * Task scheduling: Make tasks recur for various days of the week or timeframes
->  * Task statistics: See your task completion rate before due dates
->  * 
+ >  * List of tasks in the task collection
+ >  * List of labels associated with tasks
+ >  * Specific details about tasks, such as due date, addition date, or editing task details
+ >  * Statistics, such as task completion rate on-time
+ * **List of features**
+ >  * Task list view: Quickly see your list of tasks with due dates easily accessible.
+ >  * Task priority: Prioritize which tasks are important to do.
+ >  * Multiple collections: Choose between various "users" or collections with different sets of tasks.
+ >  * Task scheduling: Make tasks recur for various days of the week or timeframes
+ >  * Task statistics: See your task completion rate before due dates 
  > You also need to set up an empty project board using GitHub projects (board view with default columns). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added. All columns should be in the right order.
 
  > ## Phase II
