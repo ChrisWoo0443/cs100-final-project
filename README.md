@@ -1,7 +1,7 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Wordle Clone\>
+# \<Task Scheduler\>
  > Your author list below should include links to all members GitHub (remove existing author).
  
  > Authors: \<[Yixuan Shang](https://github.com/Calp1c0)\> \<[Dhyan Patel](https://github.com/pateldhyan)\> \<[Chris Woo](https://github.com/ChrisWoo0443)\>
@@ -18,7 +18,8 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+>       *As college students, we have complex schedules that revolve around our class schedule, extra-curriculars, and personal responsibilities. With all of this going on, it is important to keep track of all tasks     that we have pending, such as homework, to ensure that nothing slips out of our mind. Therefore, it would be great to create a task schedular that can help us manage out schedules efficiently.  
+ > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project) 
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
