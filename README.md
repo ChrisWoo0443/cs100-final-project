@@ -94,28 +94,34 @@ Purpose: Entry screen that lets people choose a task.
 
 LIST OF TASKS
 
-/task tasklist for viewing all the task lists
+Type /task tasklist for viewing all the task lists
 
 Type /tasklist select {#} to see tasks in a task list.
 
 ExampleTaskList:
 
-HighestPriorityTask | Due: Unknown
+1. HighestPriorityTask | Due: Unknown
 
-2ndHighestPriorityTask | Due 12/4/2024
+2. 2ndHighestPriorityTask | Due 12/4/2024
 
-3rdHighestPriorityTask | Due 13/4/2025
+3. 3rdHighestPriorityTask | Due 13/4/2025
 
 Type /task view {#} to see the specific details of a task.
 
 Type /task delete{#} to delete the selected task.
+
+Type /task {#}addlabel to add label to the selected task.
+
+Type /task {#} finish to mark task as done.
+
+Type /task {#}removelabel to delete labels for the selected task.
 
 The task ExampleTask has been deleted.
 
 
 -----------------------------------------
 
-Type /help task to view more command.
+Type /help task to view more commands
 
 Purpose: List of tasks people can view.
 
@@ -133,6 +139,7 @@ Type /help task to view more commands
 
 Purpose: Lets people view their statistics.
 
+
 TASK IN DETAIL:
 
 Task Name: {string}
@@ -148,7 +155,7 @@ This task [does not recur / recurs on X days of the week}
 Purpose: Lets people view specific details about individual tasks.
 
 
-> 7-DAY CALENDAR
+7-DAY CALENDAR
 
 Monday:
 
@@ -171,13 +178,13 @@ Purpose: Lets people view a calendar about the future and see recurring tasks.
 
 HELP {Category}
 
-> /task addtask - Adds a new task.
+/task addtask - Adds a new task.
 
-> /task addlist - Adds a new tasklist.
+/task addlist - Adds a new tasklist.
 
-> /task rename - Renames a task.
+/task rename - Renames a task.
 
-> /task changedue - Change due date of a task. 
+/task changedue - Change due date of a task. 
 
 etc...
 
