@@ -69,123 +69,122 @@ Highlighted in the screen's color is the list of commands the user can do from v
 ### Screen Layouts
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
 
-> TASK SCHEDULER
+TASK SCHEDULER
 
-> Select your TaskList:
+Select your TaskList:
 
-> 1. ExampleTaskList
+1. ExampleTaskList
 
-> 2. ExampleTaskList2
+2. ExampleTaskList2
 
-> 3. ExampleTaskList3.
+3. ExampleTaskList3.
 
-> Type /tasklist select {#} to select a task list.
+Type /tasklist select {#} to select a task list.
 
-> Type /tasklist newlist {name} to make a new list.
+Type /tasklist newlist {name} to make a new list.
 
-> Type /tasklist delete {#} to delete a task list.
+Type /tasklist delete {#} to delete a task list.
 
-> —-------------------------------------------------------
+—-------------------------------------------------------
 
-> Type /help tasklist to view more commands.
+Type /help tasklist to view more commands.
 
-> Purpose: Entry screen that lets people choose a task.
-
-
-> LIST OF TASKS
-
-> /task tasklist for viewing all the task lists
-
-> Type /tasklist select {#} to see tasks in a task list.
-
-> ExampleTaskList:
-
-> HighestPriorityTask | Due: Unknown
-
-> 2ndHighestPriorityTask | Due 12/4/2024
-
-> 3rdHighestPriorityTask | Due 13/4/2025
-
-> Type /task view {#} to see the specific details of a task.
-
-> Type /task delete{#} to delete the selected task.
-
-> The task ExampleTask has been deleted.
+Purpose: Entry screen that lets people choose a task.
 
 
-> -----------------------------------------
+LIST OF TASKS
 
-> Type /help task to view more commands
+/task tasklist for viewing all the task lists
 
-> Purpose: List of tasks people can view.
+Type /tasklist select {#} to see tasks in a task list.
 
-> TASK STATISTICS:
+ExampleTaskList:
 
-> You have added {int} tasks.
+HighestPriorityTask | Due: Unknown
 
-> You have completed {int} tasks.
+2ndHighestPriorityTask | Due 12/4/2024
 
-> Your success rate is {double} percent.
+3rdHighestPriorityTask | Due 13/4/2025
 
-> -----------------------------------------
+Type /task view {#} to see the specific details of a task.
 
-> Type /help task to view more commands
+Type /task delete{#} to delete the selected task.
 
-> Purpose: Lets people view their statistics.
+The task ExampleTask has been deleted.
 
 
-> TASK IN DETAIL:
+-----------------------------------------
 
-> Task Name: {string}
+Type /help task to view more command.
 
-> Description: {string}
+Purpose: List of tasks people can view.
 
-> Priority: {short}
+TASK STATISTICS:
 
-> Labels: {string}, {string}
+You have added {int} tasks.
 
-> This task [does not recur / recurs on X days of the week}
+You have completed {int} tasks.
 
-> Purpose: Lets people view specific details about individual tasks.
+Your success rate is {double} percent.
+
+-----------------------------------------
+
+Type /help task to view more commands
+
+Purpose: Lets people view their statistics.
+
+TASK IN DETAIL:
+
+Task Name: {string}
+
+Description: {string}
+
+Priority: {short}
+
+Labels: {string}, {string}
+
+This task [does not recur / recurs on X days of the week}
+
+Purpose: Lets people view specific details about individual tasks.
 
 
 > 7-DAY CALENDAR
 
-> Monday:
+Monday:
 
-> Tuesday: 
+Tuesday: 
 
-> {name} is due
+{name} is due
 
-> Wednesday:
+Wednesday:
 
-> Thursday:
+Thursday:
 
-> Friday:
+Friday:
 
-> Saturday:
+Saturday:
 
-> Sunday:
+Sunday:
 
-> Purpose: Lets people view a calendar about the future and see recurring tasks.
+Purpose: Lets people view a calendar about the future and see recurring tasks.
 
 
-> HELP {Category}
+HELP {Category}
 
-> /task addtask - Adds a new task.
+/task addtask - Adds a new task.
 
-> /task addlist - Adds a new tasklist.
+/task addlist - Adds a new tasklist.
 
-> /task rename - Renames a task.
+/task rename - Renames a task.
 
-> etc...
+etc...
 
-> Purpose: Lets people see what commands are available. Differs by category.
+Purpose: Lets people see what commands are available. Differs by category.
 
 
 
 ## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+ > This UML diagram shows the details of the main classes of the project, as well as the relationships between classes.
 > ![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/umlDiagram.PNG)
  
  > ## Phase III
