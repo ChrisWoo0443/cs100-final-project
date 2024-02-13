@@ -81,7 +81,7 @@ Highlighted in the screen's color is the list of commands the user can do from v
 
 > Type /tasklist select {#} to select a task list.
 
-> Type /tasklist new {name} to make a new list.
+> Type /tasklist newlist {name} to make a new list.
 
 > Type /tasklist delete {#} to delete a task list.
 
@@ -96,11 +96,15 @@ Highlighted in the screen's color is the list of commands the user can do from v
 
 > /task tasklist for viewing all the task lists
 
-> HighestPriority | Due: Unknown
+> Type /tasklist select {#} to see tasks in a task list.
 
-> 2ndHighestPriority | Due 12/4/2024
+> ExampleTaskList:
 
-> 3rdHighestPriority | Due 13/4/2025
+> HighestPriorityTask | Due: Unknown
+
+> 2ndHighestPriorityTask | Due 12/4/2024
+
+> 3rdHighestPriorityTask | Due 13/4/2025
 
 > Type /task view {#} to see the specific details of a task.
 
@@ -168,7 +172,7 @@ Highlighted in the screen's color is the list of commands the user can do from v
 
 > HELP {Category}
 
-> /task add - Adds a new task.
+> /task addtask - Adds a new task.
 
 > /task addlist - Adds a new tasklist.
 
