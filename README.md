@@ -68,60 +68,99 @@
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
 
 > TASK SCHEDULER
+
 > Select your TaskList:
+
 > 1. ExampleTaskList
+
 > 2. ExampleTaskList2
+
 > 3. ExampleTaskList3.
+
 > Type /tasklist select {#} to select a task list.
+
 > Type /tasklist new {name} to make a new list.
+
 > —-------------------------------------------------------
+
 > Type /help tasklist to view more commands.
 
 > Purpose: Entry screen that lets people choose a task.
 
+
 > LIST OF TASKS
+
 > HighestPriority | Due: Unknown
+
 > 2ndHighestPriority | Due 12/4/2024
+
 > 3rdHighestPriority | Due 13/4/2025
+
 > Type /task view {#} to see the specific details of a task.
+
 > -----------------------------------------
+
 > Type /help task to view more commands
 
 > Purpose: List of tasks people can view.
 
 > TASK STATISTICS:
+
 > You have added {int} tasks.
+
 > You have completed {int} tasks.
+
 > Your success rate is {double} percent.
+
 > -----------------------------------------
+
 > Type /help task to view more commands
 
 > Purpose: Lets people view their statistics.
 
+
 > TASK IN DETAIL:
+
 > Task Name: {string}
+
 > Description: {string}
+
 > Priority: {short}
+
 > Labels: {string}, {string}
+
 > This task [does not recur / recurs on X days of the week}
 
 > Purpose: Lets people view specific details about individual tasks.
 
+
 > 7-DAY CALENDAR
+
 > Monday:
+
 > Tuesday: 
+
 > {name} is due
+
 > Wednesday:
+
 > Thursday:
+
 > Friday:
+
 > Saturday:
+
 > Sunday:
 
 > Purpose: Lets people view a calendar about the future and see recurring tasks.
 
+
 > HELP {Category}
+
 > /task add - Adds a new task.
+
 > /task rename - Renames a task.
+
 > etc...
 
 > Purpose: Lets people see what commands are available. Differs by category.
