@@ -171,11 +171,13 @@ Purpose: Lets people view a calendar about the future and see recurring tasks.
 
 HELP {Category}
 
-/task addtask - Adds a new task.
+> /task addtask - Adds a new task.
 
-/task addlist - Adds a new tasklist.
+> /task addlist - Adds a new tasklist.
 
-/task rename - Renames a task.
+> /task rename - Renames a task.
+
+> /task changedue - Change due date of a task. 
 
 etc...
 
