@@ -184,8 +184,25 @@ Purpose: Lets people see what commands are available. Differs by category.
 
 
 ## Class Diagram
- > This UML diagram shows the details of the main classes of the project, as well as the relationships between classes.
-> ![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/umlDiagram.PNG)
+This UML diagram shows the details of the main classes of the project, as well as the relationships between classes.
+
+### Classes:
+
+  The Task class is an object made every time a new task is created. It contains all the basic information of the tasks, as well as functions to edit that information.
+  
+  The TaskList class is an aggregation of Task objects. It contains a vector that stores all the Task objects, with functions that add/remove tasks, and functions that get information about the tasks. 
+  
+  InputOutput is a class that will handle all of the I/O operations. This will be a dependency for the rest of the classes.
+  
+  Statistics is a class that will give back task statistics, and is dependent on the TaskList class.
+  
+  The date class is an object that will hold the relavent dates. It is a dependency of the Task class.
+  
+  Task Scheduler is our main class, with TaskList as a dependency. 
+  
+
+
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/umlDiagram.PNG)
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
