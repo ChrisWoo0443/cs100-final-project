@@ -13,15 +13,11 @@ void Task::setCreationDate(Date newCreationDate){
     this->creationDate = newCreationDate;
 }
 
-class Date{     //Does not work yet
-    void Date::setDay(int d){
-        this->day = d;
-    }
-    void Date::setMonth(int m){
-        this->month = m;
-    }
-    void Date::setYear(int y){
+//Full Constructor
+Task::Task(std::string name, int priority, Date dueDate, Date creationDate){
+    editName(name);
+    editPriority(priority);
+    editDueDate(dueDate);
+    setCreationDate(creationDate);
+}
 
-    }
-};
-//std::string getDetails();
