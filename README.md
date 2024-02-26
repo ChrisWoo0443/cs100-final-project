@@ -55,7 +55,7 @@
 This navigation diagrams show the various large screens that users can branch from via the command terminal.
 Highlighted in the screen's color is the list of commands the user can do from various screens, besides navigation commands which are implied through arrows.
 
-![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/navigationDiagram.png)
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/navigationDiagram.png)
 ### Screen Layouts
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
 
@@ -184,7 +184,7 @@ Purpose: Lets people see what commands are available. Differs by category.
 
 ## Class Diagram
  > This UML diagram shows the details of the main classes of the project, as well as the relationships between classes.
-> ![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/umlDiagram.PNG)
+> ![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/umlDiagram.PNG)
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
