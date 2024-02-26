@@ -16,4 +16,20 @@ class Date{
         void setYear(int y){
             this->year = y;
         }
+        int getDay(){
+            return this->day;
+        }
+        int getYear(){
+            return this->year;
+        }
+        int getMonth(){
+            return this->month;
+        }
+
+        
+        friend bool operator== (Date &lhs, Date &rhs);
 };
+
+bool operator== (Date &lhs, Date &rhs){
+    return(lhs.day==rhs.day && lhs.month==rhs.month && lhs.year==rhs.year);
+}
