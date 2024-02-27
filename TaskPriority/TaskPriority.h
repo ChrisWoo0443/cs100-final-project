@@ -4,12 +4,19 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class TaskPriority {
-    public:
+    
+    private:
         string TaskName;
         int Priority;
-        Set_def_priority(string user_task_name, int user_task_priority) {
+
+    public:
+        void Set_def_priority(string user_task_name, int user_task_priority) {
             TaskName = user_task_name;
             user_task_priority = 0;
         }
 }
+
+#endif
