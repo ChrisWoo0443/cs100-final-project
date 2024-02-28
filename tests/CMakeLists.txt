@@ -6,6 +6,10 @@ add_subdirectory(googletest)
 add_executable(runAllTests
   testInputValidation.cpp
   taskObjectTests.cpp
+  taskListObjectTests.cpp
+  ../src/Date.cpp
+  ../src/Task.cpp
+  ../src/TaskList.cpp
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gmock gtest gtest_main)
