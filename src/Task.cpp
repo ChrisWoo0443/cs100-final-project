@@ -1,4 +1,4 @@
-#include "header/Task.hpp" 
+#include "../header/Task.hpp" 
 
 //setters     
 void Task::editName(std::string newName){

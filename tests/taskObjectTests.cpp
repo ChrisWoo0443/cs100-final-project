@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
-#include "../Task.cpp"
+#include "../header/Task.hpp"
+#include "../header/Date.hpp"
 
 TEST(TaskConstructorTests, newTaskName){
     Date *dueDate = new Date(30, 2, 2024);
