@@ -1,15 +1,19 @@
 #ifndef TASK_HPP
 #define TASK_HPP
 #include <iostream>
+#include "Date.hpp"
+
 using namespace std;
 
 class Task{
     private:
         string name;
         int priority;
+        Date dueDate;
+        Date creationDate;
     public:
-        Task();
-        Task(string, int);
+        // Task();
+        Task(string name, int priority, Date* dueDate, Date* creationDate);
 
 
         void editName(string newName);

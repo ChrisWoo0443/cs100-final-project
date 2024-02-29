@@ -5,14 +5,18 @@ using namespace std;
 
 
 //constructors
-Task::Task(){
-    this->name = "";
-    this->priority = 0;
-}
+// Task::Task(){
+//     this->name = "";
+//     this->priority = 0;
+//     this->dueDate = nullptr;
+//     this->creationDate = nullptr;
+// }
 
-Task::Task(string name, int priority){
+Task::Task(string name, int priority, Date* dueDate, Date* creationDate){
     this->name = name;
     this->priority = priority;
+    this->dueDate = *dueDate;
+    this->creationDate = *creationDate;
 }
 
 //mutators
