@@ -13,6 +13,9 @@ void Task::editDueDate(Date newDueDate){
 void Task::setCreationDate(Date newCreationDate){
     this->creationDate = newCreationDate;
 }
+void Task::editDetail(std::string newDetail){
+    this->detail = newDetail;
+}
 
 //getters 
 std::string Task::getName(){
@@ -27,12 +30,15 @@ Date Task::getDueDate(){
 Date Task::getCreationDate(){
     return this->creationDate;
 }
+std::string Task::getDetail(){
+    return this->detail;
+}
 
 //Full Constructor
-Task::Task(std::string name, int priority, Date* dueDate, Date* creationDate){
+Task::Task(std::string name, int priority, Date* dueDate, Date* creationDate)
+{
     editName(name);
     editPriority(priority);
     editDueDate(*dueDate);
     setCreationDate(*creationDate);
 }
-

@@ -11,20 +11,22 @@ class Task{
         int priority;
         Date dueDate;  
         Date creationDate;
+        std::string detail;
     
     public:
         void editName(std::string newName);
         void editPriority(int newPriority);
         void editDueDate(Date newDueDate); 
         void setCreationDate(Date newCreationDate);
+        void editDetail(std::string newDetail);
         std::string getName();
         int getPriority();
         Date getDueDate();
         Date getCreationDate();
+        std::string getDetail();
 
         Task(){};  
-        Task(std::string name, int priority, Date* dueDate, Date* creationDate);       
-        //std::string getDetails();                      //Make later
+        Task(std::string name, int priority, Date* dueDate, Date* creationDate);   
 };
 
 

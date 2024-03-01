@@ -36,3 +36,25 @@ TEST(TaskConstructorTests, newTaskCreationDate){
     Date result = newTask->getCreationDate();
     EXPECT_TRUE(result == expectedCreationDate);
 }
+
+TEST(TaskDetailTests, editDetail){
+    Task newTask;
+    std::string aDetail = "Book a flight from LA to Seattle";
+    newTask.editDetail(aDetail);
+    EXPECT_EQ(newTask.getDetail(),aDetail);
+}
+
+TEST(TaskDetailTests, getDetail){
+    Task newTask;
+    std::string aDetail = newTask.getDetail();
+    EXPECT_EQ(aDetail,"");
+}
+
+TEST(TaskDetailTests, newDetail){
+    Task newTask;
+    std::string aDetail = "Book a flight from LA to Seattle";
+    std::string anotherDetail = "Book a hotel in Seattle";
+    newTask.editDetail(aDetail);
+    newTask.editDetail(anotherDetail);
+    EXPECT_EQ(newTask.getDetail(),anotherDetail);
+}
