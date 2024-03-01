@@ -1,22 +1,9 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Task Scheduler
  
  Authors: [Yixuan Shang](https://github.com/Calp1c0), [Dhyan Patel](https://github.com/pateldhyan), [Chris Woo](https://github.com/ChrisWoo0443), [Nicholas_Item](https://github.com/nitemUCR), [Haoming Shi](https://github.com/BillyBiano)
 
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
- > ## Expectations
- > * The backend of your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * **Each member of the group must actively participate in the Github Project board, writing unit tests, and reviewing commited code.**
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
-
-## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include:
- 
+## Project Description 
  **The importance of a task scheduler**
  * As college students, we have complex schedules that revolve around our class schedule, extra-curriculars, and personal responsibilities. With all of this going on, it is important to keep track of all tasks     that we have pending, such as homework, 
  to ensure that nothing slips out of our mind. Therefore, it would be great to create a task schedular that can help us manage out schedules efficiently.
@@ -55,9 +42,10 @@
 This navigation diagrams show the various large screens that users can branch from via the command terminal.
 Highlighted in the screen's color is the list of commands the user can do from various screens, besides navigation commands which are implied through arrows.
 
-![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/navigationDiagram.png)
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/pateldhyan/AddTaskBranch/supplementary/navigationDiagram.png)
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+
+Description: Our screen layouts are in text because our program will run as plaintext from the terminal. Listed in BOLD are the various "screens" that refer to different major parts of the user interface (including some inputs) and the purpose of these screens is briefly described under the section.
 
 TASK SCHEDULER
 
@@ -183,20 +171,33 @@ Purpose: Lets people see what commands are available. Differs by category.
 
 
 ## Class Diagram
- > This UML diagram shows the details of the main classes of the project, as well as the relationships between classes.
-> ![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/umlDiagram.PNG)
+
+This UML diagram shows the details of the main classes of the project, as well as the relationships between classes.
+
+### Classes:
+
+  The Task class is an object made every time a new task is created. It contains all the basic information of the tasks, as well as functions to edit that information.
+  
+  The TaskList class is an aggregation of Task objects. It contains a vector that stores all the Task objects, with functions that add/remove tasks, and functions that get information about the tasks. 
+  
+  InputOutput is a class that will handle all of the I/O operations. This will be a dependency for the rest of the classes.
+  
+  Statistics is a class that will give back task statistics, and is dependent on the TaskList class.
+  
+  The date class is an object that will hold the relavent dates. It is a dependency of the Task class.
+  
+  Task Scheduler is our main class, with TaskList as a dependency. 
+  
+
+
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ProjectUML.png)
+
  
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
+## Phase III
+
+- We updated out UML digram to reflect recommendations from out TA. We made sure to inclde a more detailed diagram that specifies the relationship that different classes have with each other. This helps us understand the structure of our code better.
+- We updated the UML diagram to make sure that our project follows the single-responsibility principle from SOLID. To make this change, we needed to add a Priority class so that the Task class was not responsible for two things. This helps us differentiate our code and focus on one aspect as a time while writing our code.
+
  > * Perform a new sprint plan like you did in Phase II.
  > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
  

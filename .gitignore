@@ -1,2 +1,9 @@
 main.cpp
 a.out
+tests/CMakeCache.txt
+tests/CMakeFiles/
+tests/Makefile
+tests/cmake_install.cmake
+tests/lib/
+tests/runAllTests
+CMakeFiles/
