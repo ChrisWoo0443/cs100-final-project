@@ -190,7 +190,7 @@ This UML diagram shows the details of the main classes of the project, as well a
   
 
 
-![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/ProjectUML.jpg)
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ProjectUML.png)
 
  
 ## Phase III
