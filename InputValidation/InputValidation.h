@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-string GetStringInputFromUser(string promptMessage);
-int GetIntInputFromUser(string promptMessage, int minimumValue, int maximumValue);
+std::string GetStringInputFromUser(std::string promptMessage);
+int GetIntInputFromUser(std::string promptMessage, int minimumValue, int maximumValue);
 
 #endif
