@@ -176,20 +176,15 @@ This UML diagram shows the details of the main classes of the project, as well a
 
 ### Classes:
 
-  The Task class is an object made every time a new task is created. It contains all the basic information of the tasks, as well as functions to edit that information.
+  - The Task class is an object made every time a new task is created. It contains all the basic information of the tasks, as well as functions to edit that information.
+- The TaskList class is an aggregation of Task objects. It contains a vector that stores all the Task objects, with functions that add/remove tasks, and functions that get information about the tasks. 
+- InputOutput is a class that will handle all of the I/O operations. This will be a dependency for the rest of the classes.
+- Input Validation is a class that will make sure all inputs are vaild. This is a dependency for the InputOutput class. 
+- Statistics is a class that will give back task statistics, and is dependent on the TaskList class.
+- The date class is an object that will hold the relavent dates. It is a dependency of the Task class.
+- Task Scheduler is our main class, with TaskList as a dependency.
+- Priority is a class that will handle priority operations of the Task object. it is a dependency of the Task class.
   
-  The TaskList class is an aggregation of Task objects. It contains a vector that stores all the Task objects, with functions that add/remove tasks, and functions that get information about the tasks. 
-  
-  InputOutput is a class that will handle all of the I/O operations. This will be a dependency for the rest of the classes.
-  
-  Statistics is a class that will give back task statistics, and is dependent on the TaskList class.
-  
-  The date class is an object that will hold the relavent dates. It is a dependency of the Task class.
-  
-  Task Scheduler is our main class, with TaskList as a dependency. 
-  
-
-
 ![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ProjectUML.png)
 
  
@@ -197,10 +192,8 @@ This UML diagram shows the details of the main classes of the project, as well a
 
 - We updated out UML digram to reflect recommendations from out TA. We made sure to inclde a more detailed diagram that specifies the relationship that different classes have with each other. This helps us understand the structure of our code better.
 - We updated the UML diagram to make sure that our project follows the single-responsibility principle from SOLID. To make this change, we needed to add a Priority class so that the Task class was not responsible for two things. This helps us differentiate our code and focus on one aspect as a time while writing our code.
+- We updated the UML diagram again to represent the InputValidation class, which what to make sure we follow the single-responsibility principle. This will help us separate our InputOutput class from out InputValidation. 
 
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
 > During the meeting with your reader you will discuss: 
  > * How effective your last sprint was (each member should talk about what they did)
  > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
