@@ -12,13 +12,13 @@ using namespace std::chrono;
 class TaskPriority {
 
     private:
-        string TaskName;
-        int dueMonth;
-        int dueDay;
-        int priority;
+        Date dueDate;
+        int userPriority;
 
     public:
-        TaskPriority(int month, int day) : dueMonth(month), dueDay(day) priority(0) {
+        TaskPriority(Date dueDate, int userPriority) : userPriority(0) {
+            this->dueDate = dueDate;
+            this->userPriority = userPriority;
             calculatePriority();
         }
 
@@ -27,7 +27,7 @@ class TaskPriority {
         //     user_task_priority = 0;
         // }
 
-        void calculatePriority() {
+        int calculatePriority() {
         // Get the current time
         auto now = system_clock::now();
         time_t currentTime = system_clock::to_time_t(now);
@@ -55,8 +55,23 @@ class TaskPriority {
     }
 
     int getPriority() const {
-        return priority;
+        if (userPriority == 0){
+            return calculatePriority();
+        }
+        else {
+            return userPriority
+        }
     }
+
+    void editPriority (int newPriority) {
+        this->userPriority =  newPriority;
+    }
+
+    static bool comparePriority(TaskPriority& t1, TaskPriority& t3) {
+        return t1.getPriority() > t2.getPriority();
+    }
+
+
 };
 
 #endif
