@@ -47,7 +47,7 @@ Highlighted in the screen's color is the list of commands the user can do from v
 
 Description: Our screen layouts are in text because our program will run as plaintext from the terminal. Listed in BOLD are the various "screens" that refer to different major parts of the user interface (including some inputs) and the purpose of these screens is briefly described under the section.
 
-TASK SCHEDULER
+**TASK SCHEDULER:**
 
 Select your TaskList:
 
@@ -57,24 +57,22 @@ Select your TaskList:
 
 3. ExampleTaskList3.
 
+
+Type /help to view more commands.
+
+
 Type /tasklist select {#} to select a task list.
 
 Type /tasklist newlist {name} to make a new list.
 
 Type /tasklist delete {#} to delete a task list.
 
-—-------------------------------------------------------
-
-Type /help tasklist to view more commands.
 
 Purpose: Entry screen that lets people choose a task.
 
+—-------------------------------------------------------
 
-LIST OF TASKS
-
-Type /task tasklist for viewing all the task lists
-
-Type /tasklist select {#} to see tasks in a task list.
+**LIST OF TASKS:**
 
 ExampleTaskList:
 
@@ -84,26 +82,26 @@ ExampleTaskList:
 
 3. 3rdHighestPriorityTask | Due 13/4/2025
 
-Type /task view {#} to see the specific details of a task.
 
-Type /task delete{#} to delete the selected task.
+Type /help to view more commands.
 
-Type /task {#}addlabel to add label to the selected task.
 
-Type /task {#} finish to mark task as done.
+Type /task select {#} to select a task and view its details.
 
-Type /task {#}removelabel to delete labels for the selected task.
+Type /task addtask {name} to create a new task.
 
-The task ExampleTask has been deleted.
+Type /task remove {#} to remove an existing task.
 
+Type /task done {#} to mark a task as completed.
+
+Type /task stats to view statistics of the tasklist.
+
+
+Purpose: Allows to view tasks in deatils, or modify a task.
 
 -----------------------------------------
 
-Type /help task to view more commands
-
-Purpose: List of tasks people can view.
-
-TASK STATISTICS:
+**TASK STATISTICS:**
 
 You have added {int} tasks.
 
@@ -111,14 +109,12 @@ You have completed {int} tasks.
 
 Your success rate is {double} percent.
 
+
+Purpose: Lets people view statistics of the tasklist.
+
 -----------------------------------------
 
-Type /help task to view more commands
-
-Purpose: Lets people view their statistics.
-
-
-TASK IN DETAIL:
+**TASK IN DETAIL:**
 
 Task Name: {string}
 
@@ -128,12 +124,26 @@ Priority: {short}
 
 Labels: {string}, {string}
 
-This task [does not recur / recurs on X days of the week}
+This task {does not recur / recurs on X days of the week}
+
+
+Type /help to view more commands.
+
+
+Type /change name {new name} to change the name of this task.
+
+Type /change recurrence {frequency} to change the task's recurrence.
+
+Type /change due {MM/DD/YYYY} to change the due date of a task.
+
+Type /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.
+
 
 Purpose: Lets people view specific details about individual tasks.
 
+-----------------------------------------
 
-7-DAY CALENDAR
+**7-DAY CALENDAR:**
 
 Monday:
 
@@ -151,22 +161,10 @@ Saturday:
 
 Sunday:
 
+
 Purpose: Lets people view a calendar about the future and see recurring tasks.
 
-
-HELP {Category}
-
-/task addtask - Adds a new task.
-
-/task addlist - Adds a new tasklist.
-
-/task rename - Renames a task.
-
-/task changedue - Change due date of a task. 
-
-etc...
-
-Purpose: Lets people see what commands are available. Differs by category.
+-----------------------------------------
 
 
 

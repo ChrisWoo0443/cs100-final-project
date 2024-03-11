@@ -10,7 +10,9 @@ class TaskListInterface: public Interface {
     protected:
     std::vector<TaskList> taskLists;
     void PrintBody() const override;
-    void PrintFooter() const override;
+    void PrintFooter() const;
+    std::string PrintHelper() override;
+
     
     public:
     TaskListInterface(const std::string& input, const std::vector<TaskList>& taskLists);
