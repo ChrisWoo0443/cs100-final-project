@@ -7,9 +7,11 @@ add_executable(runAllTests
   testInputValidation.cpp
   taskObjectTests.cpp
   taskListObjectTests.cpp
+  inputOutputTests.cpp
   ../src/Date.cpp
   ../src/Task.cpp
   ../src/TaskList.cpp
+  ../src/InputOutput.cpp
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gmock gtest gtest_main)

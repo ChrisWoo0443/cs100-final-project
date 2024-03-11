@@ -1,5 +1,6 @@
 #include "../header/TaskList.hpp"
 #include <string>
+#include <vector>
 
 TaskList::TaskList(const std::string& input){
     this->name = input;
@@ -15,6 +16,10 @@ void TaskList::SetName(const std::string& input){
 
 std::string TaskList::GetName() const{
     return this->name;
+}
+
+void TaskList::AddTask(Task& t1){
+    tasks.push_back(t1);
 }
 
 // helper function to help sort Tasks by priority. 
