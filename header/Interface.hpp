@@ -10,10 +10,11 @@ class Interface {
     std::string interfaceName;
     
     void PrintSpacer() const;
-    void PrintLine() const;
+    void PrintLine(const std::string& input) const;
     void PrintHeading() const;
     virtual void PrintBody() const = 0;
     void PrintFooter() const;
+    virtual std::string PrintHelper() = 0;
 
     public:
     Interface(const std::string& input);
