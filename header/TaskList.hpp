@@ -16,6 +16,7 @@ class TaskList {
         void SetName(const std::string& input);
         std::string GetName() const;
         static bool comparePriority(Task& t1, Task& t2);
+        void AddTask(Task& t1);
 };
 
 #endif

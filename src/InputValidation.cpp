@@ -1,4 +1,4 @@
-#include "InputValidation.h"
+#include "../header/InputValidation.h"
 #include <iostream>
 #include <limits>
 #include <cassert>
@@ -24,6 +24,7 @@ int GetIntInputFromUser(std::string promptMessage, int minimumValue, int maximum
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Invalid input. Please enter a number between " << minimumValue << " and " << maximumValue << "." << std::endl;
+        }
     }
 }
 
