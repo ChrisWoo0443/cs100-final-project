@@ -18,5 +18,6 @@ std::string TaskListInterface::PrintHelper() {
     return "Type /task select {#} to select a task and view its details. \n\
     Type /task addtask {name} to create a new task. \n\
     Type /task remove {#} to remove an existing task. \n\
-    Type /task done {#} to mark a task as completed.";
+    Type /task done {#} to mark a task as completed. \n\
+    Type /task stats to view statistics of the tasklist.";
 }
