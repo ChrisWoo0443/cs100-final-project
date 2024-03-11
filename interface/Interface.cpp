@@ -1,4 +1,4 @@
-#include "Interface.hpp"
+#include "../header/Interface.hpp"
 #include <iostream>
 
 void Interface::PrintSpacer() const {
@@ -27,4 +27,7 @@ void Interface::PrintScreen() const {
     PrintHeading();
     PrintBody();
     PrintFooter();
+}
+
+Interface::~Interface(){
 }

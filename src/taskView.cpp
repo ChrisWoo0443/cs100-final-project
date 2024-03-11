@@ -12,3 +12,9 @@ void TaskView::displayTaskDetails(Task task){
     cout << "Labels: " << task.getLabels() << endl;
     cout << "Due: " << task.getDueDate() << endl;
 }
+
+void TaskView::displayTaskList(vector<TaskList> list){
+    TaskListInterface todoList("Task Scheduler", list);
+    todoList.PrintScreen();
+}
+

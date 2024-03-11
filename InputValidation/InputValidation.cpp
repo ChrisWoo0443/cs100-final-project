@@ -24,6 +24,7 @@ int GetIntInputFromUser(std::string promptMessage, int minimumValue, int maximum
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Invalid input. Please enter a number between " << minimumValue << " and " << maximumValue << "." << std::endl;
+        }
     }
 }
 
@@ -36,19 +37,15 @@ std::string GetStringInputFromUser(std::string promptMessage){
 
     while(isValid == false){
         isValid = true;
-        for(int i = 0; i < userInput.size(); i++){
-            if(!std::isdigit(userInput[i]) || !std::isalpha(userInput[i]) || !std::isspace(userInput[i])){
-                isValid = false;
-                break;
-            }
-        }
-        if(isValid){
-            return userInput;
-        }
-        else{
+
+        //fixed input validation for strings, add symbols if needed
+        if(userInput.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_?./ ") != std::string::npos){
             std::cout << "Invalid input. Please enter a valid letter, number, or space" << std::endl;
             getline(std::cin, userInput);
         }
-
+        else{
+            return userInput;
+        }
     }
+    return userInput;
 }

@@ -6,7 +6,6 @@ TaskList::TaskList(const std::string& input){
 }
 
 TaskList::~TaskList(){
-
 }
 
 void TaskList::SetName(const std::string& input){

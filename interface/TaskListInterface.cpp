@@ -1,4 +1,5 @@
-#include "Interface.hpp"
+#include "../header/Interface.hpp"
+#include "../header/TaskListInterface.hpp"
 
 TaskListInterface::TaskListInterface(const std::string& input, const std::vector<TaskList>& taskLists)
     : Interface(input), taskLists(taskLists) {

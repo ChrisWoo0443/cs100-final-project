@@ -10,7 +10,7 @@ class Interface {
     std::string interfaceName;
     
     void PrintSpacer() const;
-    void PrintLine() const;
+    void PrintLine(const std::string& input) const;
     void PrintHeading() const;
     virtual void PrintBody() const = 0;
     void PrintFooter() const;
