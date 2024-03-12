@@ -1,6 +1,9 @@
 #include <iostream>
 #include "../header/taskView.hpp"
 #include "../header/task.hpp"
+#include "../header/TaskList.hpp"
+#include "../header/TaskListInterface.hpp"
+#include <TaskListInterface.hpp>
 
 using namespace std;
 
@@ -14,5 +17,7 @@ void TaskView::displayTaskDetails(Task task){
 }
 
 void TaskView::displayTaskList(vector<TaskList> list){
-
+    TaskListInterface todoList("Task Scheduler", list);
+    todoList.PrintScreen();
 }
+
