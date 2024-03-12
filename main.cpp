@@ -38,7 +38,7 @@ int main(){
 
 
             while(command != "/quit" || command != "/back"){
-                TaskDetailsInterface sublist(taskList.at(stoi(selectNum)-1).GetName(), task);
+                TaskDetailsInterface sublist(taskList.at(stoi(selectNum)-1).GetName(), taskList.at(stoi(selectNum)-1).getTasks());
                 sublist.PrintScreen();
 
                 command = GetStringInputFromUser("");
@@ -52,26 +52,21 @@ int main(){
                     string selectTaskNum = "";
                     selectTaskNum += command.at(command.size()-1);
                     TaskView selectedTask;
-                    selectedTask.
-
+                    
                 }
                 //done
                 else if(command.find("/task addtask") != string::npos){
                     command = command.substr(command.find(' ') + 1);
                     command = command.substr(command.find(' ') + 1);
                     Task newTask(command);
-                    task.push_back(newTask);
+                    taskList.at(stoi(selectNum)-1).addTask(newTask);
                 }
                 //done
                 else if(command.find("/task remove") != string::npos){
                     string removeTask = "";
                     removeTask += command.at(command.size()-1);
-                    if(task.size() > 1){
-                        task.erase(task.begin() + (stoi(removeTask)-1));
-                    }
-                    else{
-                        task.pop_back();
-                    }
+
+                    taskList.at(stoi(selectNum)-1).removeTask(stoi(removeTask)-1);
                 }
                 //todo
                 else if(command.find("/task done") != string::npos){
