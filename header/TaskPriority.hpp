@@ -18,7 +18,7 @@ class TaskPriority {
         int priority;
 
     public:
-        TaskPriority(int month, int day) : dueMonth(month), dueDay(day) priority(0) {
+        TaskPriority(int month, int day) : dueMonth(month), dueDay(day), priority(0) {
             calculatePriority();
         }
 
