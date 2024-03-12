@@ -19,7 +19,7 @@ class Task{
         void editDueDate(Date newDueDate); 
         void setCreationDate(Date newCreationDate);
         void editDetail(std::string newDetail);
-        std::string getName();
+        std::string getName() const;
         int getPriority();
         Date getDueDate();
         Date getCreationDate();

@@ -18,7 +18,7 @@ void Task::editDetail(std::string newDetail){
 }
 
 //getters 
-std::string Task::getName(){
+std::string Task::getName() const{
     return this->name;
 }
 int Task::getPriority(){

@@ -10,6 +10,7 @@ set(SOURCES
     interface/Interface.cpp
     interface/TaskListInterface.cpp
     InputValidation/InputValidation.cpp
-
+    interface/MainInterface.cpp
+    interface/TaskDetailsInterface.cpp
 )
 add_executable(test ${SOURCES})

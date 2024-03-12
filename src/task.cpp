@@ -30,7 +30,7 @@ void Task::editPriority(int newPriority){
 
 
 //accessors
-string Task::getName(){
+string Task::getName() const{
     return this->name;
 }
 

@@ -1,4 +1,5 @@
 #include "../header/Interface.hpp"
+#include <string>
 #include <iostream>
 
 void Interface::PrintSpacer() const {

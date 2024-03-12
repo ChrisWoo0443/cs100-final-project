@@ -4,7 +4,7 @@
 #include "../header/task.hpp"
 #include "TaskList.hpp"
 #include "TaskListInterface.hpp"
-
+#include <vector>
 class TaskView{
     public:
         void displayTaskList(vector<TaskList> list);  

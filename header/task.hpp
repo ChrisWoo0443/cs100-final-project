@@ -19,7 +19,7 @@ class Task{
         void editName(string newName);
         void editPriority(int newPriority);
 
-        string getName();
+        string getName() const;
         string getDescription();
         int getPriority();
         string getLabels();
