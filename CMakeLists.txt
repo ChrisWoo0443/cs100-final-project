@@ -4,7 +4,7 @@ project(Task)
 set(SOURCES
     main.cpp
     src/Date.cpp
-    src/task.cpp
+    src/Task.cpp
     src/TaskList.cpp
     src/taskView.cpp
     interface/Interface.cpp

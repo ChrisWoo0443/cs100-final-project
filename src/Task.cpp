@@ -42,3 +42,7 @@ Task::Task(std::string name, int priority, Date* dueDate, Date* creationDate)
     editDueDate(*dueDate);
     setCreationDate(*creationDate);
 }
+
+Task::Task(std::string name){
+    editName(name);
+}

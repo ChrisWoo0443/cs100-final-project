@@ -26,6 +26,7 @@ class Task{
         std::string getDetail();
 
         Task(){};  
+        Task(std::string name);
         Task(std::string name, int priority, Date* dueDate, Date* creationDate);   
 };
 
