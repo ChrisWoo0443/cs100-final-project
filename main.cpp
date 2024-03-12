@@ -49,9 +49,13 @@ int main(){
                 }
                 //todo
                 if(command.find("/task select") != string::npos){
-                        
+                    string selectTaskNum = "";
+                    selectTaskNum += command.at(command.size()-1);
+                    TaskView selectedTask;
+                    selectedTask.
+
                 }
-                //todo
+                //done
                 else if(command.find("/task addtask") != string::npos){
                     command = command.substr(command.find(' ') + 1);
                     command = command.substr(command.find(' ') + 1);
@@ -71,11 +75,11 @@ int main(){
                 }
                 //todo
                 else if(command.find("/task done") != string::npos){
-                        
+                    
                 }
                 //todo
                 else if(command.find("/task stats") != string::npos){
-                        
+                    
                 }
                 else if(command == "/back" || command == "/quit"){
                     break;
