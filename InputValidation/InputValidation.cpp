@@ -39,7 +39,7 @@ std::string GetStringInputFromUser(std::string promptMessage){
         isValid = true;
 
         //fixed input validation for strings, add symbols if needed
-        if(userInput.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_?./ ") != std::string::npos){
+        if(userInput.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_~`-|=+!@#$%^&*()\{}[]:;\'\"<>?./ ") != std::string::npos){
             std::cout << "Invalid input. Please enter a valid letter, number, or space" << std::endl;
             getline(std::cin, userInput);
         }

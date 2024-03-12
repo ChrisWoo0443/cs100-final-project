@@ -45,6 +45,7 @@ int main(){
                 system("clear");
                 if(command == "?help"){
                     command = GetStringInputFromUser("Type /task select {#} to select a task and view its details. \nType /task addtask {name} to create a new task. \nType /task remove {#} to remove an existing task. \nType /task done {#} to mark a task as completed. \nType /task stats to view statistics of the tasklist.\nType /back to go back\nType /quit to quit");
+                    system("clear");
                 }
                 //todo
                 if(command.find("/task select") != string::npos){
