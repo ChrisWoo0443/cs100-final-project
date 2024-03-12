@@ -3,8 +3,11 @@
 #include "Interface.hpp"
 #include <string>
 class TaskDetailsInterface : public Interface {
-protected:
-std::string PrintHelper();
+    using Interface::Interface;
+    protected:
+    void PrintBody() const override;
+    public:
+    std::string PrintHelper();
 
 };
 

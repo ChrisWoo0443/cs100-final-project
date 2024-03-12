@@ -1,5 +1,9 @@
 #include "../header/TaskDetailsInterface.hpp"
 
+void TaskDetailsInterface::PrintBody() const {
+    // todo: add body
+}
+
 std::string TaskDetailsInterface::PrintHelper() {
     return "Type /change name {new name} to change the name of this task.\n \
 Type /change recurrence {frequency} to change the task's recurrence.\n \
