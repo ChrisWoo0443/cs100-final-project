@@ -21,7 +21,7 @@ void Task::editDetail(std::string newDetail){
 std::string Task::getName() const{
     return this->name;
 }
-int Task::getPriority(){
+int Task::getPriority() const{
     return this->priority;
 }
 Date Task::getDueDate(){
@@ -30,7 +30,7 @@ Date Task::getDueDate(){
 Date Task::getCreationDate(){
     return this->creationDate;
 }
-std::string Task::getDetail(){
+std::string Task::getDetail() const{
     return this->detail;
 }
 

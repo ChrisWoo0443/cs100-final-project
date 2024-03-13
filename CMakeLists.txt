@@ -13,4 +13,4 @@ set(SOURCES
     interface/MainInterface.cpp
     interface/TaskDetailsInterface.cpp
 )
-add_executable(test ${SOURCES})
+add_executable(task ${SOURCES})

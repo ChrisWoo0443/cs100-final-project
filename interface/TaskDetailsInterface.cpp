@@ -20,4 +20,6 @@ Type /change due {MM/DD/YYYY} to change the due date of a task.\n\
 Type /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.";
 }
 
-
+Task TaskDetailsInterface::getTask(int index){
+    return listOfTasks.at(index);
+}

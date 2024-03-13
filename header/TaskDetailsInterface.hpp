@@ -13,6 +13,7 @@ class TaskDetailsInterface : public Interface {
     public:
         TaskDetailsInterface(const std::string& input, const std::vector<Task>& Tasks);
         std::string PrintHelper();
+        Task getTask(int index);
 };
 
 #endif

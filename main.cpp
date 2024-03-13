@@ -51,8 +51,37 @@ int main(){
                 if(command.find("/task select") != string::npos){
                     string selectTaskNum = "";
                     selectTaskNum += command.at(command.size()-1);
-                    TaskView selectedTask;
-                    
+
+                    while(command != "/quit"){
+                         TaskView selectedTask(sublist.getTask(stoi(selectTaskNum)-1).getName(), sublist.getTask(stoi(selectTaskNum)-1));
+                        selectedTask.PrintScreen();
+
+                        command = GetStringInputFromUser("");
+                        system("clear");
+
+                        if(command == "?help"){
+                            command = GetStringInputFromUser("Type /change name {new name} to change the name of this task.\nType /change due {MM/DD/YYYY} to change the due date of a task.\nType /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.");
+                            system("clear");
+                        }
+                        //todo
+                        if(command.find("/change name") != string::npos){
+
+                        }
+                        //todo
+                        else if(command.find("/change due") != string::npos){
+
+                        }
+                        //todo
+                        else if(command.find("/change priority") != string::npos){
+
+                        }
+                        else if(command == "/back" || command == "/quit"){
+                            break;
+                        }
+                    }
+                   
+                
+                    //continue working needs help menu
                 }
                 //done
                 else if(command.find("/task addtask") != string::npos){
@@ -100,9 +129,6 @@ int main(){
                 taskList.pop_back();
             }
         }
-         
     }
-
-
     return 1;
 }

@@ -20,10 +20,10 @@ class Task{
         void setCreationDate(Date newCreationDate);
         void editDetail(std::string newDetail);
         std::string getName() const;
-        int getPriority();
+        int getPriority() const;
         Date getDueDate();
         Date getCreationDate();
-        std::string getDetail();
+        std::string getDetail() const;
 
         Task(){};  
         Task(std::string name);

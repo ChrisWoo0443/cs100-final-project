@@ -4,16 +4,21 @@
 #include "Task.hpp"
 #include "TaskList.hpp"
 #include "TaskListInterface.hpp"
+#include "Interface.hpp"
 #include <vector>
 using namespace std;
 
-class TaskView{
+class TaskView: public Interface{
+    protected:
+        void PrintBody() const override;
+        void PrintFooter() const;
+        Task task;
     public:
+        TaskView(const string& input, const Task task);
         void displayTaskList(vector<TaskList> list);  
         string displayTaskDetails(Task task);
+        string PrintHelper();
         //void displayStatistics(Statistics stats);
-        //string getUserInputString();
-        //int getUserInputInteger();
 };
 
 #endif
