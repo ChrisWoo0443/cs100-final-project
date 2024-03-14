@@ -38,6 +38,7 @@ int main(){
 
 
             while(command != "/quit" || command != "/back"){
+                previous:
                 TaskDetailsInterface sublist(taskList.at(stoi(selectNum)-1).GetName(), taskList.at(stoi(selectNum)-1).getTasks());
                 sublist.PrintScreen();
 
@@ -52,20 +53,23 @@ int main(){
                     string selectTaskNum = "";
                     selectTaskNum += command.at(command.size()-1);
 
-                    while(command != "/quit"){
-                         TaskView selectedTask(sublist.getTask(stoi(selectTaskNum)-1).getName(), sublist.getTask(stoi(selectTaskNum)-1));
+                    while(command != "/quit" || command != "/back"){
+                        TaskView selectedTask(sublist.getTask(stoi(selectTaskNum)-1).getName(), sublist.getTask(stoi(selectTaskNum)-1));
                         selectedTask.PrintScreen();
 
                         command = GetStringInputFromUser("");
                         system("clear");
 
                         if(command == "?help"){
-                            command = GetStringInputFromUser("Type /change name {new name} to change the name of this task.\nType /change due {MM/DD/YYYY} to change the due date of a task.\nType /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.");
+                            command = GetStringInputFromUser("Type /change name {new name} to change the name of this task.\nType /change due {MM/DD/YYYY} to change the due date of a task.\nType /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.\nType /back to go back\nType /quit to quit");
                             system("clear");
                         }
                         //todo
                         if(command.find("/change name") != string::npos){
-
+                            command = command.substr(command.find(' ') + 1);
+                            command = command.substr(command.find(' ') + 1);
+                            //sublist.getTask(stoi(selectTaskNum)-1).editName(command);
+                            selectedTask.getTask().editName(command);
                         }
                         //todo
                         else if(command.find("/change due") != string::npos){
@@ -73,15 +77,18 @@ int main(){
                         }
                         //todo
                         else if(command.find("/change priority") != string::npos){
-
+                            string priorityNum = "";
+                            priorityNum += command.at(command.size()-1);
+                            selectedTask.getTask().editPriority(stoi(priorityNum));
                         }
-                        else if(command == "/back" || command == "/quit"){
+                        if(command == "/back"){
+                             goto previous;
+                        }
+                        else if(command == "/quit"){
                             break;
                         }
                     }
-                   
                 
-                    //continue working needs help menu
                 }
                 //done
                 else if(command.find("/task addtask") != string::npos){
@@ -105,7 +112,7 @@ int main(){
                 else if(command.find("/task stats") != string::npos){
                     
                 }
-                else if(command == "/back" || command == "/quit"){
+                if(command == "/back" || command == "/quit"){
                     break;
                 }
             }
