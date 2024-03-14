@@ -59,7 +59,7 @@ class TaskPriority {
             return calculatePriority();
         }
         else {
-            return userPriority
+            return userPriority;
         }
     }
 
