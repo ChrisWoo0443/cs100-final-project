@@ -2,14 +2,20 @@ cmake_minimum_required(VERSION 3.0)
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 # set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 add_subdirectory(googletest)
+project(Tests)
 
 add_executable(runAllTests
+  taskDetailTest.cpp
   testInputValidation.cpp
   taskObjectTests.cpp
   taskListObjectTests.cpp
   ../src/Date.cpp
   ../src/Task.cpp
   ../src/TaskList.cpp
+  ../InputValidation/InputValidation.cpp
+  ../src/taskView.cpp
+  ../interface/Interface.cpp
+  
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gmock gtest gtest_main)
