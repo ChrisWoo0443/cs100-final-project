@@ -1,7 +1,8 @@
+#include <iostream>
 #include "../header/taskView.hpp"
+#include "../header/Task.hpp"
 
 using namespace std;
-
 TaskView::TaskView(const string& input, const Task task)
     : Interface(input), task(task){
 }
@@ -36,4 +37,5 @@ string TaskView::PrintHelper(){
 
 Task TaskView::getTask(){
     return task;
+
 }

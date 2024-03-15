@@ -1,3 +1,4 @@
+main.cpp
 a.out
 tests/CMakeCache.txt
 tests/CMakeFiles/
@@ -14,3 +15,9 @@ src/main.cpp
 src/tasks.cpp
 task
 test
+src/Makefile
+src/TaskScheduler.cpp
+src/cmake_install.cmake
+src/CMakeCache.txt
+src/task.cpp
+header/task.hpp

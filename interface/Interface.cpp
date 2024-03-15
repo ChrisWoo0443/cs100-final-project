@@ -29,6 +29,3 @@ void Interface::PrintScreen() const {
     PrintBody();
     PrintFooter();
 }
-
-Interface::~Interface(){
-}

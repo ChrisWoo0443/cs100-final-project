@@ -3,9 +3,11 @@
 #include "Interface.hpp"
 #include <string>
 class MainInterface : public Interface {
-public:
-std::string PrintHelper();
-
+    using Interface::Interface;
+    protected:
+    void PrintBody() const override;
+    public:
+    std::string PrintHelper();
 };
 
 #endif

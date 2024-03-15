@@ -26,8 +26,8 @@ class Task{
         std::string getDetail() const;
 
         Task(){};  
-        Task(std::string name);
-        Task(std::string name, int priority, Date* dueDate, Date* creationDate);   
+        Task(std::string name, int priority, Date* dueDate, Date* creationDate);  
+        Task(std::string); 
 };
 
 

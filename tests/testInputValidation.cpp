@@ -1,8 +1,8 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-#include "../InputValidation/InputValidation.h"
-
+#include "../header/InputValidation.h"
 using namespace std;
+
 TEST(IntInputSuite, ValidInput){
 
 }
@@ -35,3 +35,4 @@ TEST(StringInput, inValidStringInput){
     system("ç√∫˙©");
     EXPECT_EQ("Invalid input. Please enter a valid letter, number, or space", getInput);
 }
+

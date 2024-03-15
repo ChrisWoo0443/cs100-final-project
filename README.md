@@ -34,7 +34,7 @@
  * Task scheduling: Make tasks recur for various days of the week or timeframes
  * Task statistics: See your task completion rate before due dates 
 
- > ## Phase II
+## Phase II
 
 ## User Interface Specification
 
@@ -42,12 +42,12 @@
 This navigation diagrams show the various large screens that users can branch from via the command terminal.
 Highlighted in the screen's color is the list of commands the user can do from various screens, besides navigation commands which are implied through arrows.
 
-![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/pateldhyan/AddTaskBranch/supplementary/navigationDiagram.png)
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/Task%20Scheduler.png)
 ### Screen Layouts
 
 Description: Our screen layouts are in text because our program will run as plaintext from the terminal. Listed in BOLD are the various "screens" that refer to different major parts of the user interface (including some inputs) and the purpose of these screens is briefly described under the section.
 
-TASK SCHEDULER
+**TASK SCHEDULER:**
 
 Select your TaskList:
 
@@ -57,24 +57,22 @@ Select your TaskList:
 
 3. ExampleTaskList3.
 
+
+Type /help to view more commands.
+
+
 Type /tasklist select {#} to select a task list.
 
 Type /tasklist newlist {name} to make a new list.
 
 Type /tasklist delete {#} to delete a task list.
 
-—-------------------------------------------------------
-
-Type /help tasklist to view more commands.
 
 Purpose: Entry screen that lets people choose a task.
 
+—-------------------------------------------------------
 
-LIST OF TASKS
-
-Type /task tasklist for viewing all the task lists
-
-Type /tasklist select {#} to see tasks in a task list.
+**LIST OF TASKS:**
 
 ExampleTaskList:
 
@@ -84,26 +82,26 @@ ExampleTaskList:
 
 3. 3rdHighestPriorityTask | Due 13/4/2025
 
-Type /task view {#} to see the specific details of a task.
 
-Type /task delete{#} to delete the selected task.
+Type /help to view more commands.
 
-Type /task {#}addlabel to add label to the selected task.
 
-Type /task {#} finish to mark task as done.
+Type /task select {#} to select a task and view its details.
 
-Type /task {#}removelabel to delete labels for the selected task.
+Type /task addtask {name} to create a new task.
 
-The task ExampleTask has been deleted.
+Type /task remove {#} to remove an existing task.
 
+Type /task done {#} to mark a task as completed.
+
+Type /task stats to view statistics of the tasklist.
+
+
+Purpose: Allows to view tasks in deatils, or modify a task.
 
 -----------------------------------------
 
-Type /help task to view more commands
-
-Purpose: List of tasks people can view.
-
-TASK STATISTICS:
+**TASK STATISTICS:**
 
 You have added {int} tasks.
 
@@ -111,14 +109,12 @@ You have completed {int} tasks.
 
 Your success rate is {double} percent.
 
+
+Purpose: Lets people view statistics of the tasklist.
+
 -----------------------------------------
 
-Type /help task to view more commands
-
-Purpose: Lets people view their statistics.
-
-
-TASK IN DETAIL:
+**TASK IN DETAIL:**
 
 Task Name: {string}
 
@@ -128,12 +124,26 @@ Priority: {short}
 
 Labels: {string}, {string}
 
-This task [does not recur / recurs on X days of the week}
+This task {does not recur / recurs on X days of the week}
+
+
+Type /help to view more commands.
+
+
+Type /change name {new name} to change the name of this task.
+
+Type /change recurrence {frequency} to change the task's recurrence.
+
+Type /change due {MM/DD/YYYY} to change the due date of a task.
+
+Type /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.
+
 
 Purpose: Lets people view specific details about individual tasks.
 
+-----------------------------------------
 
-7-DAY CALENDAR
+**7-DAY CALENDAR:**
 
 Monday:
 
@@ -151,22 +161,10 @@ Saturday:
 
 Sunday:
 
+
 Purpose: Lets people view a calendar about the future and see recurring tasks.
 
-
-HELP {Category}
-
-/task addtask - Adds a new task.
-
-/task addlist - Adds a new tasklist.
-
-/task rename - Renames a task.
-
-/task changedue - Change due date of a task. 
-
-etc...
-
-Purpose: Lets people see what commands are available. Differs by category.
+-----------------------------------------
 
 
 
@@ -176,16 +174,15 @@ This UML diagram shows the details of the main classes of the project, as well a
 
 ### Classes:
 
-  - The Task class is an object made every time a new task is created. It contains all the basic information of the tasks, as well as functions to edit that information.
+- The Task class is an object made every time a new task is created. It contains all the basic information of the tasks, as well as functions to edit that information.
 - The TaskList class is an aggregation of Task objects. It contains a vector that stores all the Task objects, with functions that add/remove tasks, and functions that get information about the tasks. 
 - InputOutput is a class that will handle all of the I/O operations. This will be a dependency for the rest of the classes.
 - Input Validation is a class that will make sure all inputs are vaild. This is a dependency for the InputOutput class. 
 - Statistics is a class that will give back task statistics, and is dependent on the TaskList class.
 - The date class is an object that will hold the relavent dates. It is a dependency of the Task class.
-- Task Scheduler is our main class, with TaskList as a dependency.
 - Priority is a class that will handle priority operations of the Task object. it is a dependency of the Task class.
   
-![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ProjectUML.png)
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ProjectUML_final.png)
 
  
 ## Phase III
@@ -194,24 +191,48 @@ This UML diagram shows the details of the main classes of the project, as well a
 - We updated the UML diagram to make sure that our project follows the single-responsibility principle from SOLID. To make this change, we needed to add a Priority class so that the Task class was not responsible for two things. This helps us differentiate our code and focus on one aspect as a time while writing our code.
 - We updated the UML diagram again to represent the InputValidation class, which what to make sure we follow the single-responsibility principle. This will help us separate our InputOutput class from out InputValidation. 
 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
-
  
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
+## Final deliverable
  
  ## Screenshots
- > Screenshots of the input/output after running your application
- ## Installation/Usage
- > Instructions on installing and running your application
+Task List Menu:
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/SelectTaskListScreen.png)
+
+Task Menu:
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ViewTaskList.png)
+
+Task Details:
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/TaskDetails.png)
+
+Help Menus:
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/TaskListHelpMenu.png)
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/TaskHelpMenu.png)
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/TaskDetailHelpMenu.png)
+
+## Installation/Usage
+ 1) Clone the repository to your local files using https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033.git
+ 2) Navigate to the repository and run the program using the following commands:
+```
+$ cd <repository directory>
+$ cmake .
+$ make
+$ ./task
+```
+3) Create lists and tasks using the terminal user interface. If any help is needed with commands, use
+```
+?help
+```
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+Our project was validated and tested using the GoogleTest framework. This, alongside the use of CMake and Make, allowed us to easily integrate testing into our team workflow. While planning new features, we also planned the unit tests that would go along with them to ensure that all of our code is functional. All of these tests go in a separate "tests" folder, and we would typically have have one test file per class. Then, before making commits to git, we would ensure that the expected unit tests were passing. This way all of our features and classes were validated before writing our main function. To view and run these unit tests, you can navigate to the tests folder in the repository and run the following: 
+```
+$ cd tests
+$ cmake .
+$ make
+$ ./runAllTests
+```

@@ -13,10 +13,8 @@ class Interface {
     void PrintHeading() const;
     virtual void PrintBody() const = 0;
     void PrintFooter() const;
-    
     public:
     Interface(const std::string& input);
-    ~Interface();
     void PrintScreen() const; 
     virtual std::string PrintHelper() = 0;
 };
