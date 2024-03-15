@@ -8,6 +8,16 @@ TEST(TaskListConstructorTests, newListName){
     EXPECT_EQ(taskList->GetName(), "hello");
 }
 
+TEST(ConstructorTests, listNameTest){
+    TaskList *testTask = new TaskList("testList");
+    EXPECT_FALSE(testTask->GetName() == "");
+}
+
+TEST(ConstructorTests, checkListName){
+    TaskList *taskList = new TaskList("testName");
+    EXPECT_TRUE(taskList->GetName() == "testName");
+}
+
 TEST(TaskListTests, ChangeName){
     TaskList *taskList = new TaskList("hello");
     taskList->SetName("goodbye!");

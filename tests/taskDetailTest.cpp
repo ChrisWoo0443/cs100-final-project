@@ -17,9 +17,25 @@ TEST(displayTest, displayTaskDetailsTest){
     EXPECT_EQ(printTask.displayTaskDetails(testTask), expectedString);
 }
 
+TEST(displayTest, displayTaskDetailsTest2){
+    Task testTask("math");
+    testTask.editDetail("algebra");
+    testTask.editPriority(2);
+    TaskView printTask("math", testTask);
+    string expectedString = "TASK IN DETAIL: \nTask Name: math\nDescription: algebra\nPriority: 2";
+    EXPECT_EQ(printTask.displayTaskDetails(testTask), expectedString);
+}
+
 TEST(displayTest, detailsWithConstructor){
     Task testTask("hw");
     TaskView printTask(testTask.getName(), testTask);
     string expectedString = "TASK IN DETAIL: \nTask Name: hw\nDescription: DO IT SOON\nPriority: 1";
+    EXPECT_EQ(printTask.displayTaskDetails(testTask), expectedString);
+}
+
+TEST(displayTest, detailsWithConstructor2){
+    Task testTask("math");
+    TaskView printTask(testTask.getName(), testTask);
+    string expectedString = "TASK IN DETAIL: \nTask Name: math\nDescription: DO IT SOON\nPriority: 1";
     EXPECT_EQ(printTask.displayTaskDetails(testTask), expectedString);
 }
