@@ -9,6 +9,7 @@
 #include "header/TaskListInterface.hpp"
 #include "header/TaskDetailsInterface.hpp"
 #include "header/MainInterface.hpp"
+#include "header/TaskStatsViewer.hpp"
 
 #include <iostream>
 #include <vector>
@@ -131,7 +132,13 @@ int main(){
                 }
                 //todo
                 else if(command.find("/task stats") != string::npos){
-                    
+                 TaskStatsViewer taskStatsViewer("Task Statistics");
+                 taskStatsViewer.PrintScreen();
+                 command = input.GetStringInputFromUser("");
+                 if(command == "/back" || command == "/quit"){
+                    system("clear");
+                    break;
+                 }
                 }
                 if(command == "/back" || command == "/quit"){
                     break;
