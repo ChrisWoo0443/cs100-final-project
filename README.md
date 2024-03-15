@@ -192,12 +192,6 @@ This UML diagram shows the details of the main classes of the project, as well a
 - We updated the UML diagram to make sure that our project follows the single-responsibility principle from SOLID. To make this change, we needed to add a Priority class so that the Task class was not responsible for two things. This helps us differentiate our code and focus on one aspect as a time while writing our code.
 - We updated the UML diagram again to represent the InputValidation class, which what to make sure we follow the single-responsibility principle. This will help us separate our InputOutput class from out InputValidation. 
 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
-
  
  > ## Final deliverable
  > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
@@ -209,7 +203,23 @@ This UML diagram shows the details of the main classes of the project, as well a
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ 1) Clone the repository to your local files using https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033.git
+ 2) Navigate to the repository and run the program using the following commands:
+```
+$ cd <repository directory>
+$ cmake .
+$ make
+$ ./task
+```
+3) Create lists and tasks using the terminal user interface. If any help is needed with commands, use
+```
+?help
+```
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+Our project was validated and tested using the GoogleTest framework. This, alongside the use of CMake and Make, allowed us to easily integrate testing into our team workflow. While planning new features, we also planned the unit tests that would go along with them to ensure that all of our code is functional. All of these tests go in a separate "tests" folder, and we would typically have have one test file per class. Then, before making commits to git, we would ensure that the expected unit tests were passing. This way all of our features and classes were validated before writing our main function. To view and run these unit tests, you can navigate to the tests folder in the repository and run the following: 
+```
+$ cd tests
+$ cmake .
+$ make
+$ ./runAllTests
+```
