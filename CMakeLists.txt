@@ -1,6 +1,16 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+project(Task)
 
-ADD_SUBDIRECTORY(googletest)
-
-TARGET_LINK_LIBRARIES(test gtest)
-TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
+set(SOURCES
+    main.cpp
+    src/Date.cpp
+    src/Task.cpp
+    src/TaskList.cpp
+    src/taskView.cpp
+    interface/Interface.cpp
+    interface/TaskListInterface.cpp
+    src/InputValidation.cpp
+    interface/MainInterface.cpp
+    interface/TaskDetailsInterface.cpp
+)
+add_executable(task ${SOURCES})

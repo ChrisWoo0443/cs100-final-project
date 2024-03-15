@@ -4,7 +4,9 @@ cmake_minimum_required(VERSION 3.0)
 add_subdirectory(googletest)
 
 add_executable(runAllTests
-  testInputValidation.cpp
+  taskDetailTest.cpp
+  # TestInputValidation.cpp
+  # testInputValidation.cpp
   taskObjectTests.cpp
   taskListObjectTests.cpp
   #inputOutputTests.cpp
@@ -14,6 +16,7 @@ add_executable(runAllTests
   ../src/Date.cpp
   ../src/Task.cpp
   ../src/TaskList.cpp
+  ../src/taskView.cpp
   #../src/InputOutput.cpp
   ../interface/Interface.cpp
   ../interface/MainInterface.cpp

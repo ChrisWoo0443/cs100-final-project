@@ -7,7 +7,17 @@ tests/cmake_install.cmake
 tests/lib/
 tests/runAllTests
 CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+header/tasks.hpp
+src/main.cpp
+src/tasks.cpp
+task
+test
 src/Makefile
 src/TaskScheduler.cpp
 src/cmake_install.cmake
 src/CMakeCache.txt
+src/task.cpp
+header/task.hpp

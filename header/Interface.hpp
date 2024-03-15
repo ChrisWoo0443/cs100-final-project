@@ -5,7 +5,6 @@
 #include <string>
 
 class Interface {
-
     protected:
     std::string interfaceName;
     
@@ -14,11 +13,11 @@ class Interface {
     void PrintHeading() const;
     virtual void PrintBody() const = 0;
     void PrintFooter() const;
-
     public:
     Interface(const std::string& input);
     void PrintScreen() const; 
     virtual std::string PrintHelper() = 0;
 };
+
 
 #endif

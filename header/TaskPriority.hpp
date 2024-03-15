@@ -18,9 +18,9 @@ class TaskPriority {
         int priority;
 
     public:
-        TaskPriority(int month, int day) : dueMonth(month), dueDay(day) priority(0) {
-            calculatePriority();
-        }
+        // TaskPriority(int month, int day) : dueMonth(month), dueDay(day) priority(0) {
+        //     calculatePriority();
+        // }
 
         // void Set_def_priority(string& user_task_name, int user_task_priority) {
         //     TaskName = user_task_name;

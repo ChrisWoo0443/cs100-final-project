@@ -19,14 +19,15 @@ class Task{
         void editDueDate(Date newDueDate); 
         void setCreationDate(Date newCreationDate);
         void editDetail(std::string newDetail);
-        std::string getName();
-        int getPriority();
+        std::string getName() const;
+        int getPriority() const;
         Date getDueDate();
         Date getCreationDate();
-        std::string getDetail();
+        std::string getDetail() const;
 
         Task(){};  
-        Task(std::string name, int priority, Date* dueDate, Date* creationDate);   
+        Task(std::string name, int priority, Date* dueDate, Date* creationDate);  
+        Task(std::string); 
 };
 
 
