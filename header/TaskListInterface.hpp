@@ -11,12 +11,10 @@ class TaskListInterface: public Interface {
     std::vector<TaskList> taskLists;
     void PrintBody() const override;
     void PrintFooter() const;
-    std::string PrintHelper() override;
 
-    
     public:
     TaskListInterface(const std::string& input, const std::vector<TaskList>& taskLists);
-
+    std::string PrintHelper() override;
     
 };
 
