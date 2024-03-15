@@ -18,10 +18,10 @@ void Task::editDetail(std::string newDetail){
 }
 
 //getters 
-std::string Task::getName() const{
+std::string Task::getName(){
     return this->name;
 }
-int Task::getPriority() const{
+int Task::getPriority(){
     return this->priority;
 }
 Date Task::getDueDate(){
@@ -30,7 +30,7 @@ Date Task::getDueDate(){
 Date Task::getCreationDate(){
     return this->creationDate;
 }
-std::string Task::getDetail() const{
+std::string Task::getDetail(){
     return this->detail;
 }
 
@@ -41,10 +41,4 @@ Task::Task(std::string name, int priority, Date* dueDate, Date* creationDate)
     editPriority(priority);
     editDueDate(*dueDate);
     setCreationDate(*creationDate);
-}
-
-Task::Task(std::string name){
-    editName(name);
-    editDetail("DO IT SOON");
-    editPriority(1);
 }

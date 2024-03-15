@@ -4,7 +4,7 @@
 #include <cassert>
 
 
-int InputValidation::GetIntInputFromUser(std::string promptMessage, int minimumValue, int maximumValue){
+int GetIntInputFromUser(std::string promptMessage, int minimumValue, int maximumValue){
     assert(minimumValue < maximumValue);
 
     int userInput;
@@ -29,7 +29,7 @@ int InputValidation::GetIntInputFromUser(std::string promptMessage, int minimumV
 }
 
 //letters, numbers, spaces
-std::string InputValidation::GetStringInputFromUser(std::string promptMessage){
+std::string GetStringInputFromUser(std::string promptMessage){
     std::cout << promptMessage << std::endl;
     bool isValid = false;
     std::string userInput;
@@ -37,15 +37,19 @@ std::string InputValidation::GetStringInputFromUser(std::string promptMessage){
 
     while(isValid == false){
         isValid = true;
-
-        //fixed input validation for strings, add symbols if needed
-        if(userInput.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_~`-|=+!@#$%^&*()\{}[]:;\'\"<>?./ ") != std::string::npos){
+        for(int i = 0; i < userInput.size(); i++){
+            if(!std::isdigit(userInput[i]) || !std::isalpha(userInput[i]) || !std::isspace(userInput[i])){
+                isValid = false;
+                break;
+            }
+        }
+        if(isValid){
+            return userInput;
+        }
+        else{
             std::cout << "Invalid input. Please enter a valid letter, number, or space" << std::endl;
             getline(std::cin, userInput);
         }
-        else{
-            return userInput;
-        }
+
     }
-    return userInput;
 }

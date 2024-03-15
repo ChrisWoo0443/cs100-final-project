@@ -1,25 +1,15 @@
 #ifndef TASKVIEW_HPP
 #define TASKVIEW_HPP
 
-#include "Task.hpp"
-#include "TaskList.hpp"
-#include "TaskListInterface.hpp"
-#include "Interface.hpp"
-#include <vector>
-using namespace std;
+#include "../header/task.hpp"
 
-class TaskView: public Interface{
-    protected:
-        void PrintBody() const override;
-        void PrintFooter() const;
-        Task task;
+class TaskView{
     public:
-        TaskView(const string& input, const Task task);
-        void displayTaskList(vector<TaskList> list);  
-        string displayTaskDetails(Task task);
-        string PrintHelper();
+        //void displayTaskList(vector<User> user);  
+        void displayTaskDetails(Task task);
         //void displayStatistics(Statistics stats);
-        Task getTask();
+        //string getUserInputString();
+        //int getUserInputInteger();
 };
 
 #endif
