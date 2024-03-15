@@ -17,7 +17,7 @@ class TaskList {
         std::string GetName() const;
         static bool comparePriority(Task& t1, Task& t2);
 
-        void addTask(Task);
+        void addTask(Task, int);
         void removeTask(int);
         std::vector<Task> getTasks();
 };

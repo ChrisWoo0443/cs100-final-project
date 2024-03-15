@@ -19,6 +19,7 @@ class TaskView: public Interface{
         string displayTaskDetails(Task task);
         string PrintHelper();
         //void displayStatistics(Statistics stats);
+        Task getTask();
 };
 
 #endif

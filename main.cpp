@@ -36,7 +36,6 @@ int main(){
             string selectNum = "";
             selectNum += command.at(command.size()-1);
 
-
             while(command != "/quit" || command != "/back"){
                 previous:
                 TaskDetailsInterface sublist(taskList.at(stoi(selectNum)-1).GetName(), taskList.at(stoi(selectNum)-1).getTasks());
@@ -45,41 +44,60 @@ int main(){
                 command = GetStringInputFromUser("");
                 system("clear");
                 if(command == "?help"){
-                    command = GetStringInputFromUser("Type /task select {#} to select a task and view its details. \nType /task addtask {name} to create a new task. \nType /task remove {#} to remove an existing task. \nType /task done {#} to mark a task as completed. \nType /task stats to view statistics of the tasklist.\nType /back to go back\nType /quit to quit");
+                    command = GetStringInputFromUser("Type /task select {#} to select a task and view its details. \nType /task addtask {name} to create a new task. \nType /task remove {#} to remove an existing task. \nType /back to go back\nType /quit to quit");
                     system("clear");
                 }
                 //todo
                 if(command.find("/task select") != string::npos){
                     string selectTaskNum = "";
                     selectTaskNum += command.at(command.size()-1);
-
+                    
+                    Task replaceTask(sublist.getTask(stoi(selectTaskNum)-1).getName());
+                    replaceTask = taskList.at(stoi(selectNum)-1).getTasks().at(stoi(selectTaskNum)-1);
+                    cout << "back";
                     while(command != "/quit" || command != "/back"){
-                        TaskView selectedTask(sublist.getTask(stoi(selectTaskNum)-1).getName(), sublist.getTask(stoi(selectTaskNum)-1));
+                    
+                        TaskView selectedTask(replaceTask.getName(), replaceTask);    
+                        //TaskView selectedTask(taskList.at(stoi(selectNum)-1).getTasks().at(stoi(selectTaskNum)-1).getName(), taskList.at(stoi(selectNum)-1).getTasks().at(stoi(selectTaskNum)-1));
                         selectedTask.PrintScreen();
 
                         command = GetStringInputFromUser("");
                         system("clear");
 
                         if(command == "?help"){
-                            command = GetStringInputFromUser("Type /change name {new name} to change the name of this task.\nType /change due {MM/DD/YYYY} to change the due date of a task.\nType /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.\nType /back to go back\nType /quit to quit");
+                            command = GetStringInputFromUser("Type /change name {new name} to change the name of this task.\nType /change due {MM/DD/YYYY} to change the due date of a task.\nType /change description {description} to change details\nType /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.\nType /back to go back\nType /quit to quit");
                             system("clear");
                         }
-                        //todo
+                        //done
                         if(command.find("/change name") != string::npos){
                             command = command.substr(command.find(' ') + 1);
                             command = command.substr(command.find(' ') + 1);
-                            //sublist.getTask(stoi(selectTaskNum)-1).editName(command);
-                            selectedTask.getTask().editName(command);
-                        }
-                        //todo
-                        else if(command.find("/change due") != string::npos){
+                            sublist.getTask(stoi(selectTaskNum)-1).editName(command);
+                            replaceTask.editPriority(sublist.getTask(stoi(selectTaskNum)-1).getPriority());
+                            replaceTask.editName(command);
+                            taskList.at(stoi(selectNum)-1).removeTask(stoi(selectTaskNum)-1);
+                            taskList.at(stoi(selectNum)-1).addTask(replaceTask, stoi(selectTaskNum)-1);
 
                         }
                         //todo
+                        else if(command.find("/change due") != string::npos){
+                            cout << "| currently cannot change due date" << endl;
+                        }
+                        else if(command.find("/change description") != string::npos){
+                            command = command.substr(command.find(' ') + 1);
+                            command = command.substr(command.find(' ') + 1);
+                            replaceTask.editDetail(command);
+                            taskList.at(stoi(selectNum)-1).removeTask(stoi(selectTaskNum)-1);
+                            taskList.at(stoi(selectNum)-1).addTask(replaceTask, stoi(selectTaskNum)-1);
+
+                        }
+                        //done
                         else if(command.find("/change priority") != string::npos){
                             string priorityNum = "";
                             priorityNum += command.at(command.size()-1);
-                            selectedTask.getTask().editPriority(stoi(priorityNum));
+                            replaceTask.editPriority(stoi(priorityNum));
+                            taskList.at(stoi(selectNum)-1).removeTask(stoi(selectTaskNum)-1);
+                            taskList.at(stoi(selectNum)-1).addTask(replaceTask, stoi(selectTaskNum)-1);
                         }
                         if(command == "/back"){
                              goto previous;
@@ -95,7 +113,7 @@ int main(){
                     command = command.substr(command.find(' ') + 1);
                     command = command.substr(command.find(' ') + 1);
                     Task newTask(command);
-                    taskList.at(stoi(selectNum)-1).addTask(newTask);
+                    taskList.at(stoi(selectNum)-1).addTask(newTask, taskList.at(stoi(selectNum)-1).getTasks().size());
                 }
                 //done
                 else if(command.find("/task remove") != string::npos){

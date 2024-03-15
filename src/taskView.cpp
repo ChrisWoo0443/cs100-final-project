@@ -9,8 +9,9 @@ TaskView::TaskView(const string& input, const Task task)
 void TaskView::PrintBody() const{
     string description = "Description: " + task.getDetail();
     PrintLine(description);
-    string priority = "Priority: " + task.getPriority();
+    string priority = "Priority: " + to_string(task.getPriority());
     PrintLine(priority);
+    PrintLine("Due: 3/15/24");
 }
 
 void TaskView::PrintFooter() const {
@@ -31,4 +32,8 @@ void TaskView::displayTaskList(vector<TaskList> list){
 
 string TaskView::PrintHelper(){
     return "";
+}
+
+Task TaskView::getTask(){
+    return task;
 }

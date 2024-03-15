@@ -1,6 +1,6 @@
 #include "../header/TaskList.hpp"
 #include <string>
-
+#include <vector>
 
 TaskList::TaskList(const std::string& input){
     this->name = input;
@@ -23,8 +23,8 @@ bool TaskList::comparePriority(Task& t1, Task& t2) {
     return t1.getPriority() > t2.getPriority();
 }
 
-void TaskList::addTask(Task task){
-    tasks.push_back(task);
+void TaskList::addTask(Task task, int index){
+    tasks.insert(tasks.begin() + index, task);
 }
 
 void TaskList::removeTask(int index){
