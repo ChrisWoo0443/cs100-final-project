@@ -34,7 +34,7 @@
  * Task scheduling: Make tasks recur for various days of the week or timeframes
  * Task statistics: See your task completion rate before due dates 
 
- > ## Phase II
+## Phase II
 
 ## User Interface Specification
 
@@ -174,16 +174,15 @@ This UML diagram shows the details of the main classes of the project, as well a
 
 ### Classes:
 
-  - The Task class is an object made every time a new task is created. It contains all the basic information of the tasks, as well as functions to edit that information.
+- The Task class is an object made every time a new task is created. It contains all the basic information of the tasks, as well as functions to edit that information.
 - The TaskList class is an aggregation of Task objects. It contains a vector that stores all the Task objects, with functions that add/remove tasks, and functions that get information about the tasks. 
 - InputOutput is a class that will handle all of the I/O operations. This will be a dependency for the rest of the classes.
 - Input Validation is a class that will make sure all inputs are vaild. This is a dependency for the InputOutput class. 
 - Statistics is a class that will give back task statistics, and is dependent on the TaskList class.
 - The date class is an object that will hold the relavent dates. It is a dependency of the Task class.
-- Task Scheduler is our main class, with TaskList as a dependency.
 - Priority is a class that will handle priority operations of the Task object. it is a dependency of the Task class.
   
-![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ProjectUML.png)
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ProjectUML_final.png)
 
  
 ## Phase III
@@ -193,12 +192,7 @@ This UML diagram shows the details of the main classes of the project, as well a
 - We updated the UML diagram again to represent the InputValidation class, which what to make sure we follow the single-responsibility principle. This will help us separate our InputOutput class from out InputValidation. 
 
  
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
+## Final deliverable
  
  ## Screenshots
 Task List Menu:
