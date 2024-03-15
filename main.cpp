@@ -44,7 +44,7 @@ int main(){
                 command = GetStringInputFromUser("");
                 system("clear");
                 if(command == "?help"){
-                    command = GetStringInputFromUser("Type /task select {#} to select a task and view its details. \nType /task addtask {name} to create a new task. \nType /task remove {#} to remove an existing task. \nType /back to go back\nType /quit to quit");
+                    command = GetStringInputFromUser("Type /task select {#} to select a task and view its details. \nType /task addtask {name} to create a new task.\nType /task remove {#} to remove an existing task.Type /task done {#} to mark a task as completed.\nType /task stats to view statistics of the tasklist\nType /back to go back\nType /quit to quit");
                     system("clear");
                 }
                 //todo
@@ -54,11 +54,9 @@ int main(){
                     
                     Task replaceTask(sublist.getTask(stoi(selectTaskNum)-1).getName());
                     replaceTask = taskList.at(stoi(selectNum)-1).getTasks().at(stoi(selectTaskNum)-1);
-                    cout << "back";
                     while(command != "/quit" || command != "/back"){
                     
                         TaskView selectedTask(replaceTask.getName(), replaceTask);    
-                        //TaskView selectedTask(taskList.at(stoi(selectNum)-1).getTasks().at(stoi(selectTaskNum)-1).getName(), taskList.at(stoi(selectNum)-1).getTasks().at(stoi(selectTaskNum)-1));
                         selectedTask.PrintScreen();
 
                         command = GetStringInputFromUser("");
