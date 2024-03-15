@@ -42,7 +42,7 @@
 This navigation diagrams show the various large screens that users can branch from via the command terminal.
 Highlighted in the screen's color is the list of commands the user can do from various screens, besides navigation commands which are implied through arrows.
 
-![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/pateldhyan/AddTaskBranch/supplementary/navigationDiagram.png)
+![alt text](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/Task%20Scheduler.png)
 ### Screen Layouts
 
 Description: Our screen layouts are in text because our program will run as plaintext from the terminal. Listed in BOLD are the various "screens" that refer to different major parts of the user interface (including some inputs) and the purpose of these screens is briefly described under the section.
