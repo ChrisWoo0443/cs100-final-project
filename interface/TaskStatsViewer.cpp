@@ -2,12 +2,16 @@
 
 void TaskStatsViewer::PrintBody() const {
     std::string failedTasks = "Number of failed tasks: ";
-    failedTasks += this->taskStats->failedTasks;
+    failedTasks += std::to_string(this->taskStats.failedTasks);
     PrintLine(failedTasks);
 
-    PrintLine();
+    PrintLine("");
 
-    std::string successfulTasks = "Number of successful tasks: "
-    successfulTasks += this->taskStats->successfulTasks;
+    std::string successfulTasks = "Number of successful tasks: ";
+    successfulTasks += std::to_string(this->taskStats.successfulTasks);
     PrintLine(successfulTasks);
+}
+
+std::string TaskStatsViewer::PrintHelper() {
+    return "Type /back to go back.";
 }

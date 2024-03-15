@@ -12,5 +12,6 @@ set(SOURCES
     src/InputValidation.cpp
     interface/MainInterface.cpp
     interface/TaskDetailsInterface.cpp
+    interface/TaskStatsViewer.cpp
 )
 add_executable(task ${SOURCES})
