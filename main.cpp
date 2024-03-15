@@ -5,7 +5,7 @@
 #include "header/Task.hpp"
 #include "header/TaskPriority.hpp"
 #include "header/taskView.hpp"
-#include "InputValidation/InputValidation.h"
+#include "header/InputValidation.h"
 #include "header/TaskListInterface.hpp"
 #include "header/TaskDetailsInterface.hpp"
 #include "header/MainInterface.hpp"
@@ -21,14 +21,16 @@ int main(){
     vector <TaskList> taskList;
     vector<Task> task;
 
+    InputValidation input;
+
     while(command != "/quit"){
         TaskListInterface todoList("Task Scheduler", taskList);
         todoList.PrintScreen();
 
-        command = GetStringInputFromUser("");
+        command = input.GetStringInputFromUser("");
         system("clear");
         if(command == "?help"){
-            command = GetStringInputFromUser("Type /tasklist select {#} - to select a task list.\nType /tasklist newlist {name} - to make a new list.\nType /tasklist delete {#} - to delete a task list.\n/back - previous page\n/quit - exit program");
+            command = input.GetStringInputFromUser("Type /tasklist select {#} - to select a task list.\nType /tasklist newlist {name} - to make a new list.\nType /tasklist delete {#} - to delete a task list.\n/back - previous page\n/quit - exit program");
             system("clear");
         }
         //todo
@@ -41,10 +43,10 @@ int main(){
                 TaskDetailsInterface sublist(taskList.at(stoi(selectNum)-1).GetName(), taskList.at(stoi(selectNum)-1).getTasks());
                 sublist.PrintScreen();
 
-                command = GetStringInputFromUser("");
+                command = input.GetStringInputFromUser("");
                 system("clear");
                 if(command == "?help"){
-                    command = GetStringInputFromUser("Type /task select {#} to select a task and view its details. \nType /task addtask {name} to create a new task.\nType /task remove {#} to remove an existing task.Type /task done {#} to mark a task as completed.\nType /task stats to view statistics of the tasklist\nType /back to go back\nType /quit to quit");
+                    command = input.GetStringInputFromUser("Type /task select {#} to select a task and view its details. \nType /task addtask {name} to create a new task.\nType /task remove {#} to remove an existing task.Type /task done {#} to mark a task as completed.\nType /task stats to view statistics of the tasklist\nType /back to go back\nType /quit to quit");
                     system("clear");
                 }
                 //todo
@@ -59,11 +61,11 @@ int main(){
                         TaskView selectedTask(replaceTask.getName(), replaceTask);    
                         selectedTask.PrintScreen();
 
-                        command = GetStringInputFromUser("");
+                        command = input.GetStringInputFromUser("");
                         system("clear");
 
                         if(command == "?help"){
-                            command = GetStringInputFromUser("Type /change name {new name} to change the name of this task.\nType /change due {MM/DD/YYYY} to change the due date of a task.\nType /change description {description} to change details\nType /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.\nType /back to go back\nType /quit to quit");
+                            command = input.GetStringInputFromUser("Type /change name {new name} to change the name of this task.\nType /change due {MM/DD/YYYY} to change the due date of a task.\nType /change description {description} to change details\nType /change priority {level} to change the priority of a task, 1 for highest and 9 for lowest.\nType /back to go back\nType /quit to quit");
                             system("clear");
                         }
                         //done

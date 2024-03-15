@@ -9,13 +9,23 @@ add_executable(runAllTests
   testInputValidation.cpp
   taskObjectTests.cpp
   taskListObjectTests.cpp
+  #inputOutputTests.cpp
+  MainInterfaceTests.cpp
+  TaskListInterfaceTests.cpp
+  TaskDetailsInterfaceTests.cpp
   ../src/Date.cpp
   ../src/Task.cpp
   ../src/TaskList.cpp
   ../InputValidation/InputValidation.cpp
   ../src/taskView.cpp
-  ../interface/Interface.cpp
+
   
+  #../src/InputOutput.cpp
+  ../interface/Interface.cpp
+  ../interface/MainInterface.cpp
+  ../interface/TaskDetailsInterface.cpp
+  ../interface/TaskListInterface.cpp
+
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gmock gtest gtest_main)

@@ -9,7 +9,7 @@ set(SOURCES
     src/taskView.cpp
     interface/Interface.cpp
     interface/TaskListInterface.cpp
-    InputValidation/InputValidation.cpp
+    src/InputValidation.cpp
     interface/MainInterface.cpp
     interface/TaskDetailsInterface.cpp
 )

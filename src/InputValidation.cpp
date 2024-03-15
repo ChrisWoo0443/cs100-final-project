@@ -1,10 +1,10 @@
-#include "InputValidation.h"
+#include "../header/InputValidation.h"
 #include <iostream>
 #include <limits>
 #include <cassert>
 
 
-int GetIntInputFromUser(std::string promptMessage, int minimumValue, int maximumValue){
+int InputValidation::GetIntInputFromUser(std::string promptMessage, int minimumValue, int maximumValue){
     assert(minimumValue < maximumValue);
 
     int userInput;
@@ -29,7 +29,7 @@ int GetIntInputFromUser(std::string promptMessage, int minimumValue, int maximum
 }
 
 //letters, numbers, spaces
-std::string GetStringInputFromUser(std::string promptMessage){
+std::string InputValidation::GetStringInputFromUser(std::string promptMessage){
     std::cout << promptMessage << std::endl;
     bool isValid = false;
     std::string userInput;

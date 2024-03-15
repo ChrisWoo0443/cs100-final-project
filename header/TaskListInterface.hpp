@@ -16,6 +16,7 @@ class TaskListInterface: public Interface {
     
     public:
     TaskListInterface(const std::string& input, const std::vector<TaskList>& taskLists);
+
     
 };
 

@@ -20,6 +20,7 @@ class TaskList {
         void addTask(Task, int);
         void removeTask(int);
         std::vector<Task> getTasks();
+        void AddTask(Task& t1);
 };
 
 #endif
