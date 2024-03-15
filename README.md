@@ -201,8 +201,27 @@ This UML diagram shows the details of the main classes of the project, as well a
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
- ## Installation/Usage
+Task List Menu:
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/SelectTaskListScreen.png)
+
+Task Menu:
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/ViewTaskList.png)
+
+Task Details:
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/TaskDetails.png)
+
+Help Menus:
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/TaskListHelpMenu.png)
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/TaskHelpMenu.png)
+
+![image](https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033/blob/master/supplementary/TaskDetailHelpMenu.png)
+
+## Installation/Usage
  1) Clone the repository to your local files using https://github.com/cs100/final-project-dpate148-nitem003-yshan039-cwoo017-hshi033.git
  2) Navigate to the repository and run the program using the following commands:
 ```
