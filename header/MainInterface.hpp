@@ -3,7 +3,7 @@
 #include "Interface.hpp"
 #include <string>
 class MainInterface : public Interface {
-protected:
+public:
 std::string PrintHelper();
 
 };

@@ -21,7 +21,7 @@ void TaskView::PrintFooter() const {
 string TaskView::displayTaskDetails(Task task){
     string details = "TASK IN DETAIL: \nTask Name: " + task.getName() + "\n";
     details += "Description: " + task.getDetail() + "\n";
-    details += "Priority: " + task.getPriority();
+    details += "Priority: " + to_string(task.getPriority());
     return details;
 }
 

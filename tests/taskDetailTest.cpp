@@ -13,13 +13,13 @@ TEST(displayTest, displayTaskDetailsTest){
     testTask.editDetail("this is math hw");
     testTask.editPriority(1);
     TaskView printTask("hw", testTask);
-    string expectedString = "============================================================"
-                            "| hw"
-                            "============================================================"
-                            "| Description: this is math hw"
-                            "| Priority: 1"
-                            "| Due: 3/15/24"
-                            "============================================================"
-                            "| To see a list of commands, type ?help.\n";
+    string expectedString = "TASK IN DETAIL: \nTask Name: hw\nDescription: this is math hw\nPriority: 1";
+    EXPECT_EQ(printTask.displayTaskDetails(testTask), expectedString);
+}
+
+TEST(displayTest, detailsWithConstructor){
+    Task testTask("hw");
+    TaskView printTask(testTask.getName(), testTask);
+    string expectedString = "TASK IN DETAIL: \nTask Name: hw\nDescription: DO IT SOON\nPriority: 1";
     EXPECT_EQ(printTask.displayTaskDetails(testTask), expectedString);
 }

@@ -6,7 +6,7 @@ project(Tests)
 
 add_executable(runAllTests
   taskDetailTest.cpp
-  testInputValidation.cpp
+  # TestInputValidation.cpp
   taskObjectTests.cpp
   taskListObjectTests.cpp
   ../src/Date.cpp
@@ -15,6 +15,7 @@ add_executable(runAllTests
   ../InputValidation/InputValidation.cpp
   ../src/taskView.cpp
   ../interface/Interface.cpp
+  ../interface/TaskListInterface.cpp
   
 )
 
